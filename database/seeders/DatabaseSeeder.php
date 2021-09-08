@@ -132,8 +132,8 @@ class DatabaseSeeder extends Seeder
         $return = [];
         foreach ($employees as $employee)
         {
+            $employee['created_at'] = now();
             $return[] = $employee;
-            $return['created_at'] = now();
         }
         return $return;
     }
@@ -143,8 +143,8 @@ class DatabaseSeeder extends Seeder
         $return = [];
         foreach ($employeeLeaves as $employeeLeave)
         {
+            $employeeLeave['created_at'] = now();
             $return[] = $employeeLeave;
-            $return['created_at'] = now();
         }
         return $return;
     }
